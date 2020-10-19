@@ -1,0 +1,16 @@
+{
+  "name": "keycloak-ionic",
+  "version": "1.0.0",
+  "description": "Keycloak Adapter for Ionicframework",
+  "main": "keycloak.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohannesBauer97/keycloak-ionic.git"
+  },
+  "author": "Johannes Bauer",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/JohannesBauer97/keycloak-ionic/issues"
+  },
+  "homepage": "https://github.com/JohannesBauer97/keycloak-ionic#readme"
+}
