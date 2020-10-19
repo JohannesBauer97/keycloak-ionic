@@ -1,13 +1,22 @@
 {
   "name": "keycloak-ionic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Keycloak Adapter for Ionicframework",
   "main": "keycloak.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JohannesBauer97/keycloak-ionic.git"
   },
-  "author": "Johannes Bauer",
+  "keywords": [
+    "capacitor",
+    "adapter",
+    "auth",
+    "authentication",
+    "oauth2",
+    "openid",
+    "keycloak"
+  ],
+  "author": "waterfront",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/JohannesBauer97/keycloak-ionic/issues"
