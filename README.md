@@ -59,7 +59,7 @@ Adapter to use an inApp browser
 * Setup your Android App to work with deep links
 
 The adapter will directly access Capacitors app api to listen to iOS (universal links) and Android deep links.
-Also the native browser will be opened for the login/logout/register and account management pages.
+Also the inApp browser will be opened for the login/logout/register and account management pages.
 
 ### Usage
 1. Install package
