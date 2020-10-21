@@ -1,5 +1,5 @@
 # keycloak-ionic
-This is an extended version of the existing keycloak.js Adapter. It's the same code, I try to keep it up-to-date. The only difference are 2 more adapters for capacitor. I know it's possible to provide custom adapters 
+This is an extended version of the existing keycloak.js Adapter. It's the same code, I try to keep it up-to-date. The only difference are 2 more adapters for capacitor. I know it's possible to provide custom adapters, but writing it in the original library means to reuse the existing private methods to analyse keycloak responses, more efficiency and less code duplicates.
 
 Original (**v11.0.2**) Implementation: 
 * https://github.com/keycloak/keycloak/blob/11.0.2/adapters/oidc/js/src/main/resources/keycloak.js
