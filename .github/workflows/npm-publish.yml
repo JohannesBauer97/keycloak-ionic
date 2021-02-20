@@ -2,7 +2,7 @@ name: NPM Publish
 
 on:
   release:
-    types: [ workflow_dispatch, push ]
+    types: [ workflow_dispatch,push ]
 
 jobs:
   publish-npm:
