@@ -63,7 +63,7 @@ constructor()
         redirectUri: 'http://localhost:8100'
     });
 
-// Test if it works, when coming back from this.keycloak.login();
+    // Test if it works, when coming back from this.keycloak.login();
     this.keycloak.onAuthSuccess = () => {
         console.log('authenticated!');
     };
@@ -112,7 +112,7 @@ constructor()
         redirectUri: 'http://localhost:8100'
     });
 
-// Test if it works, when coming back from this.keycloak.login();
+    // Test if it works, when coming back from this.keycloak.login();
     this.keycloak.onAuthSuccess = () => {
         console.log('authenticated!');
     };
