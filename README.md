@@ -46,8 +46,7 @@ npm i keycloak-ionic
 2. Use it
 
 ````Typescript
-public
-keycloak: Keycloak.KeycloakInstance;
+public keycloak: Keycloak.KeycloakInstance;
 
 constructor()
 {
@@ -95,8 +94,7 @@ npm i keycloak-ionic
 2. Use it
 
 ````Typescript
-public
-keycloak: Keycloak.KeycloakInstance;
+public keycloak: Keycloak.KeycloakInstance;
 
 constructor()
 {
