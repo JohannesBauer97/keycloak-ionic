@@ -1,4 +1,4 @@
-name: NPM Publish
+name: NPM Publish Beta
 
 on: workflow_dispatch
 
@@ -12,6 +12,6 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm publish
+      - run: npm publish --tag beta
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
