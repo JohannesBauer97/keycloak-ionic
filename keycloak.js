@@ -1689,7 +1689,7 @@
                             processCallback(oauth, promise);
                         });
 
-                        window.location.href = loginUrl;
+                        window.open(loginUrl,'_system');
                         return promise.promise;
                     },
 
@@ -1702,7 +1702,7 @@
                             promise.setSuccess();
                         });
 
-                        window.location.href = logoutUrl;
+                        window.open(logoutUrl,'_system');
                         return promise.promise;
                     },
 
@@ -1713,7 +1713,7 @@
                             var oauth = parseCallback(data.url);
                             processCallback(oauth, promise);
                         });
-                        window.location.href = registerUrl;
+                        window.open(registerUrl,'_system');
                         return promise.promise;
 
                     },
@@ -1721,7 +1721,7 @@
                     accountManagement : function() {
                         var accountUrl = kc.createAccountUrl();
                         if (typeof accountUrl !== 'undefined') {
-                            window.location.href = accountUrl;
+                            window.open(accountUrl,'_system');
                         } else {
                             throw "Not supported by the OIDC server";
                         }
