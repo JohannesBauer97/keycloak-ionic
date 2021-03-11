@@ -9,7 +9,7 @@ https://www.keycloak.org/getting-started/getting-started-docker
 `docker run -p 8080:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin quay.io/keycloak/keycloak:12.0.4`
 
 ### 2. Import webapp client into keycloak
-
+The ng-example iOS project is configured with `ng-example` as [custom url scheme](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app). 
 ```json
 {
     "clientId": "webapp",
