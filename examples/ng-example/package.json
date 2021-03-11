@@ -4,8 +4,8 @@
   "author": "Johannes Bauer",
   "homepage": "https://johannes-bauer.de/",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "external:ios:debug": "ionic capacitor run ios -l --external",
+    "start": "ionic serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
     "@capacitor/core": "2.4.7",
+    "@capacitor/ios": "^2.4.7",
     "@ionic/angular": "^5.5.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
