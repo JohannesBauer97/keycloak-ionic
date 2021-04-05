@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ng-example</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h2>Status: <span>{{authSuccess ? 'Authenticated' : 'Unauthenticated'}}</span></h2>
+    <pre *ngIf="userProfile">{{userProfile | json}}</pre>
+
+    <div *ngIf="authSuccess"></div>
+    <ion-button (click)="login()">Login</ion-button>
+    <ion-button (click)="loadProfile()" [disabled]="!authSuccess">Load Profile</ion-button>
+    <ion-button (click)="logout()">Logout</ion-button>
+    <p>Keycloak token is not persistent in this example.</p>
+  </div>
+</ion-content>
