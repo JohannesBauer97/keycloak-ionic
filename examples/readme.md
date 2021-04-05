@@ -77,4 +77,4 @@ The ng-example iOS project is configured with `ng-example` as [custom url scheme
 ```
 ### 3. Run test project ng-example
 1. `npm install` installs dependencies
-2. `npm run external:ios:debug` to start live reload with capacitoro
+2. `npm run external:ios:debug` to start live reload with capacitor

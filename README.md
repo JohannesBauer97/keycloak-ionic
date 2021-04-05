@@ -95,6 +95,8 @@ npm i keycloak-ionic
 
 2. Use it
 
+Check out the `examples` folder.
+
 ````Typescript
 public keycloak: Keycloak.KeycloakInstance;
 
