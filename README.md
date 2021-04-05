@@ -27,7 +27,7 @@ Extensions:
 
 Adapter to use the system browser.
 
-<img src="https://github.com/JohannesBauer97/keycloak-ionic/raw/feature/example-project/examples/ng-example/demo.gif" height="350">
+<img src="https://github.com/JohannesBauer97/keycloak-ionic/raw/main/examples/ng-example/demo.gif" height="350">
 
 ### Prerequisites
 
