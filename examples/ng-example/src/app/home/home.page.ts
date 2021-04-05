@@ -1,18 +1,21 @@
-import {Component} from '@angular/core';
-import * as Keycloak from "../../../../../src";
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import * as Keycloak from '../../../../../src';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  styleUrls: ['home.page.scss']
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
   public keycloak: Keycloak.KeycloakInstance;
-  public authSuccess: boolean = false;
+  public authSuccess: boolean;
   public userProfile: Keycloak.KeycloakProfile;
 
-  constructor() {
+  constructor(private changeRef: ChangeDetectorRef) {
+  }
+
+  ngOnInit(): void {
     this.keycloak = Keycloak({
       clientId: 'webapp',
       realm: 'master',
@@ -26,15 +29,28 @@ export class HomePage {
     });
 
     this.keycloak.onAuthSuccess = () => {
-      console.log('authenticated!');
-      this.authSuccess = this.keycloak.authenticated;
-      this.keycloak.loadUserProfile().then(profile => this.userProfile = profile);
+      console.log('login');
+      this.authSuccess = true;
+      this.changeRef.detectChanges();
     };
 
+    this.keycloak.onAuthLogout = () => {
+      console.log('logout');
+      this.authSuccess = false;
+      this.userProfile = null;
+      this.changeRef.detectChanges();
+    };
   }
 
   login(): void {
     this.keycloak.login();
+  }
+
+  loadProfile(): void {
+    this.keycloak.loadUserProfile().then(profile => {
+      this.userProfile = profile;
+      this.changeRef.detectChanges();
+    });
   }
 
   logout(): void {

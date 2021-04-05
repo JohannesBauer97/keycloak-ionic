@@ -19,6 +19,8 @@
 
     <div *ngIf="authSuccess"></div>
     <ion-button (click)="login()">Login</ion-button>
+    <ion-button (click)="loadProfile()" [disabled]="!authSuccess">Load Profile</ion-button>
     <ion-button (click)="logout()">Logout</ion-button>
+    <p>Keycloak token is not persistent in this example.</p>
   </div>
 </ion-content>
