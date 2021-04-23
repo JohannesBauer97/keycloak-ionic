@@ -1684,9 +1684,10 @@
                         var promise = createPromise();
                         var loginUrl = kc.createLoginUrl(options);
 
-                        window.Capacitor.Plugins.App.addListener('appUrlOpen', (data) => {
+                        const addUrlListener = window.Capacitor.Plugins.App.addListener('appUrlOpen', (data) => {
                             var oauth = parseCallback(data.url);
                             processCallback(oauth, promise);
+                            addUrlListener.remove();
                         });
 
                         window.open(loginUrl,'_system');
@@ -1697,9 +1698,10 @@
                         var promise = createPromise();
                         var logoutUrl = kc.createLogoutUrl(options);
 
-                        window.Capacitor.Plugins.App.addListener('appUrlOpen', (data) => {
+                        const addUrlListener = window.Capacitor.Plugins.App.addListener('appUrlOpen', (data) => {
                             kc.clearToken();
                             promise.setSuccess();
+                            addUrlListener.remove();
                         });
 
                         window.open(logoutUrl,'_system');
