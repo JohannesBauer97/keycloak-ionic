@@ -14,7 +14,7 @@ jobs:
       - run: cp ./README.md ./src/README.md
       - run: npm install
         working-directory: ./src
-      - run: npm publish --tag beta --dry-run
+      - run: npm publish --tag beta
         working-directory: ./src
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
