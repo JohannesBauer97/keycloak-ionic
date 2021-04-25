@@ -5,7 +5,6 @@ on: workflow_dispatch
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
-    working-directoy: ./src
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -13,6 +12,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm install
+        working-directoy: ./src
       - run: npm publish --tag beta --dry-run
+        working-directoy: ./src
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
