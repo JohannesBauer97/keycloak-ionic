@@ -6,14 +6,13 @@ jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
+      - run: cd src
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm install
-        working-directoy: ./src
       - run: npm publish --tag beta --dry-run
-        working-directoy: ./src
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
