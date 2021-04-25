@@ -11,9 +11,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+      - run: cp ./README.md ./src/README.md
       - run: npm install
         working-directory: ./src
-      - run: npm publish --tag beta
+      - run: npm publish --tag beta --dry-run
         working-directory: ./src
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
