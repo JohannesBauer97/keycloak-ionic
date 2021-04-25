@@ -3,7 +3,7 @@ name: NPM Publish Beta
 on: workflow_dispatch
 
 jobs:
-  publish-npm:
+  publish-npm-beta:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -12,6 +12,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm install
+        working-directory: ./src
       - run: npm publish --tag beta
+        working-directory: ./src
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
