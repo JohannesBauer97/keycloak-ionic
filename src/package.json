@@ -1,7 +1,7 @@
 {
   "name": "keycloak-ionic",
-  "version": "12.0.4",
-  "description": "Keycloak Adapter for Ionicframework",
+  "version": "12.0.5-beta.0",
+  "description": "Keycloak adapter for Ionicframework with Capacitor support.",
   "main": "keycloak.js",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "base64-js": "^1.3.1",
     "js-sha256": "^0.9.0"
   },
-  "author": "waterfront",
+  "author": "Johannes Bauer",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/JohannesBauer97/keycloak-ionic/issues"
