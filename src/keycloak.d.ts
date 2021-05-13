@@ -184,7 +184,8 @@ declare namespace Keycloak {
 
 	interface KeycloakLoginOptions {
 		/**
-		 * @private Undocumented.
+		 * Specifies the scope parameter for the login url
+		 * The scope 'openid' will be added to the scope if it is missing or undefined.
 		 */
 		scope?: string;
 
@@ -249,6 +250,13 @@ declare namespace Keycloak {
 	}
 
 	interface KeycloakRegisterOptions extends Omit<KeycloakLoginOptions, 'action'> { }
+	
+	interface KeycloakAccountOptions {
+		/**
+		 * Specifies the uri to redirect to when redirecting back to the application.
+		 */
+		redirectUri?: string;	
+	}
 
 	type KeycloakPromiseCallback<T> = (result: T) => void;
 
@@ -530,8 +538,9 @@ declare namespace Keycloak {
 
 		/**
 		 * Returns the URL to the Account Management Console.
+		 * @param options The options used for creating the account URL.
 		 */
-		createAccountUrl(): string;
+		createAccountUrl(options?: KeycloakAccountOptions): string;
 
 		/**
 		 * Returns true if the token has less than `minValidity` seconds left before
