@@ -9,9 +9,9 @@ implementations are required for custom adapters.
 There is an open discussion about implementing the capacitor adapter in the original library
 here: https://groups.google.com/g/keycloak-dev/c/_D62KbWTuvc/m/4-1EJ-68BAAJ
 
-Original (**v12.0.3**) Implementation:
+Original (**v13.0.0**) Implementation:
 
-* https://github.com/keycloak/keycloak/blob/12.0.3/adapters/oidc/js/src/main/resources/keycloak.js
+* https://github.com/keycloak/keycloak/blob/13.0.0/adapters/oidc/js/src/main/resources/keycloak.js
 
 Official Documentation:
 
