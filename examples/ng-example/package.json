@@ -5,6 +5,7 @@
   "homepage": "https://johannes-bauer.de/",
   "scripts": {
     "external:ios:debug": "ionic capacitor run ios -l --external",
+    "app:ios:sync": "ionic capacitor sync ios",
     "start": "ionic serve",
     "build": "ng build",
     "test": "ng test",
