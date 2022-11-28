@@ -1,3 +1,11 @@
+# Deprecated
+This package is not maintained anymore.
+
+You can use [manfredsteyer/angular-oauth2-oidc](https://github.com/manfredsteyer/angular-oauth2-oidc) to connect with Keycloak.
+
+Example using angular-oauth2-oidc with Keycloak and Ionic (Capacitor): [JohannesBauer97/keycloak-ionic-example](https://github.com/JohannesBauer97/keycloak-ionic-example)
+
+---
 # keycloak-ionic
 
 This is an extended version of the existing keycloak.js Adapter. It's the same code, I try to keep it up-to-date.
