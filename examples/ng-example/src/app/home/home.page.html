@@ -15,6 +15,7 @@
 
   <div id="container">
     <h2>Status: <span>{{authSuccess ? 'Authenticated' : 'Unauthenticated'}}</span></h2>
+    <h3>Device: <span>{{ platformName }}</span></h3>
     <pre *ngIf="userProfile">{{userProfile | json}}</pre>
 
     <div *ngIf="authSuccess"></div>
